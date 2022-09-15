@@ -1,0 +1,24 @@
+* {
+    text-align: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;   /* Height of the footer */
+    background: burlywood;
+ }
+ main {
+    height: 100%;
+    width: 100%;
+    margin-top: 60px;
+ }
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: blanchedalmond;
+}
+body {
+    margin: 0;
+}
