@@ -1,5 +1,10 @@
 * {
     text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+html {
+    height: 100%;
+    background-image: linear-gradient(to bottom right, lavender, cyan);
 }
 footer {
     position: fixed;
@@ -12,7 +17,7 @@ footer {
     height: 100%;
     width: 100%;
     margin-top: 60px;
- }
+}
 header {
     position: fixed;
     top: 0;
@@ -21,4 +26,11 @@ header {
 }
 body {
     margin: 0;
+}
+a:hover {
+    color: red;
+}
+#contract-div {
+    max-width: 600px;
+    margin: auto;
 }
