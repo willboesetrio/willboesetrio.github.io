@@ -25,7 +25,18 @@
   </main>
   <footer>
     <p><a href="index.html">Go To HOME</a> add a navbar here that links to yor sites</p>
+    <a href="https://validator.w3.org/check?uri=referer">
+      <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." class="buttons" id = "validation_link_html"/>
+  </a>
+  <a href="https://jigsaw.w3.org/css-validator/check/referer">
+      <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." class="buttons" id = "validation_link_css"/>
+  </a>
     <!--When an element’s position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page. The element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there. Take a look at the image below: -->
   </footer>
+  <script>
+    console.log("script is running: " + "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
+    document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
+</script>
 </body>
 </html>
