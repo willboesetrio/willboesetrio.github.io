@@ -4,25 +4,27 @@
 }
 html {
     height: 100%;
-    background-image: linear-gradient(to bottom right, lavender, cyan);
+    background-image: linear-gradient(to bottom right, lavender 25%, cyan);
 }
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     background: burlywood;
+    height: 100px;
  }
  main {
     height: 100%;
     width: 100%;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 120px;
+    padding-top: 10px;
 }
 header {
     position: fixed;
     top: 0;
     width: 100%;
     background: blanchedalmond;
+    height: 120px;
 }
 body {
     margin: 0;
@@ -38,5 +40,18 @@ li {
     text-align: left;
 }
 figcaption {
-    /* em */
+    font-style: italic;
+}
+figure img {
+    border-radius: 25px;
+}
+ul {
+    margin-left: 100px;
+}
+#intro-content {
+    max-width: 700px; 
+    margin:auto;
+}
+.behind-footer {
+    height: 100px;
 }
