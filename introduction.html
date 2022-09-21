@@ -12,14 +12,11 @@
     <script src="script/script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>William Boese's Wandering Bird | CP-CO-01</h1>
-        <p><a href="index.html">Home</a> | <a href="introduction.html">Introduction</a> | <a href="contract.html">Contract</a></p>
-    </header>
+    <div data-include="components/header.html"></div>
     <main>
     <h2>William Boese: Introduction</h2>
     <figure>
-        <img src="images/will_profile_min.jpeg" alt="will_profile" height="300px">
+        <img src="images/will_profile_min.jpeg" alt="will_profile">
         <figcaption>Profile picture</figcaption>
     </figure>
     <div id="intro-content">
@@ -39,14 +36,7 @@
     <div class="behind-footer"></div>
 
     </main>
-    <footer>
-        <p><a href="https://github.com/willboesetrio" target="_blank">Github</a> | <a href="https://www.codecademy.com/profiles/dev7104250399" target="_blank">Codecademy</a> | <a href="https://www.freecodecamp.org/William_Boese" target="_blank">FreeCodeCamp</a></p>
-        <a href="https://validator.w3.org/check?uri=referer">
-          <img src="images/button_validation_html5.png" alt="validate html" id = "htmlBtn">
-      </a>
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">
-          <img src="images/button_validation_css.png" alt="validate css" id="cssBtn">
-      </a>
-      </footer>
+    <div data-include="components/footer.html"></div>
+    <script src="script/HTMLInclude.js"></script>
 </body>
 </html>
