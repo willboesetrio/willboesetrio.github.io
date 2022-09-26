@@ -13,12 +13,16 @@ footer {
     bottom: 0;
     width: 100%;
     background: burlywood;
-    height: 100px;
+    height: 90px;
  }
+.footer-nav {
+    padding: 4px 0 0 0;
+    margin: 0;
+}
  main {
     height: 100%;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 90px;
     padding-top: 10px;
 }
 header {
@@ -26,10 +30,16 @@ header {
     top: 0;
     width: 100%;
     background: blanchedalmond;
-    height: 120px;
+    height: 90px;
 }
 body {
     margin: 0;
+}
+h1 {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 a {
     text-decoration: none;
@@ -59,9 +69,13 @@ ul {
     margin:auto;
 }
 .behind-footer {
-    height: 100px;
+    height: 90px;
 } 
 .about-content {
     margin: auto;
     max-width: 400px;
+}
+.bottom-signature {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
