@@ -2,6 +2,7 @@
 * {
     text-align: center;
     font-family: 'Dosis', sans-serif;
+    color: darkred
     
 }
 html {
@@ -67,6 +68,7 @@ ul {
 #intro-content {
     max-width: fit-content;
     margin:auto;
+    font-size: 105%;
 }
 .behind-footer {
     height: 90px;
