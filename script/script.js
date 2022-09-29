@@ -1,4 +1,4 @@
-console.log('testing');
+
 const htmlBtn = document.getElementById("html-btn");
 htmlBtn.setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
 const cssBtn = document.getElementById("css-btn");

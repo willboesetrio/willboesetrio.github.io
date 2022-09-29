@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <div data-include="components/header.html"></div>
+    <main>
+    <h2>Fizz Buzz</h2>
+    <h3 id="results"></h3>
+    <script>
+        console.log('this script is running in the fizzbuzz page');
+        function fizzBuzzBang(max) {
+  let arr = [];
+  for (var i = 1; i <= max; i++) {
+    	let output = '';
+    
+  		if (i % 3 === 0) {
+      	output += 'fizz';
+  		}
+    	if (i % 5 === 0) {
+     		output += 'buzz';
+  		}
+    	if (i % 7 === 0) {
+      	output += 'BANG!';
+  		}
+    	if (output.length === 0) {
+    		output = i;
+  		}
+    	arr.push(output + '<br>')
+  }
+  return arr;
+}
+        document.getElementById('results').innerHTML = fizzBuzzBang(200).join('');
+    </script>
+    <div class="behind-footer"></div>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="script/HTMLInclude.js"></script>
+</body>
+</html>
