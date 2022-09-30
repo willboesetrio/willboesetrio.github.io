@@ -15,12 +15,13 @@
     <div data-include="components/header.html"></div>
     <main>
     <h2>Fizz Buzz</h2>
+    <button id="fizz-btn">Click to run FizzBuzz</button>
     <h3 id="results"></h3>
     <script>
         console.log('this script is running in the fizzbuzz page');
         function fizzBuzzBang(max) {
-  let arr = [];
-  for (var i = 1; i <= max; i++) {
+    let arr = [];
+    for (var i = 1; i <= max; i++) {
     	let output = '';
     
   		if (i % 3 === 0) {
@@ -36,10 +37,11 @@
     		output = i;
   		}
     	arr.push(output + '<br>')
-  }
-  return arr;
-}
-        document.getElementById('results').innerHTML = fizzBuzzBang(200).join('');
+    }
+    return arr;
+    }
+    let fizzBtn = document.getElementById('fizz-btn');
+    fizzBtn.addEventListener('click', function() {document.getElementById('results').innerHTML = fizzBuzzBang(200).join('');})
     </script>
     <div class="behind-footer"></div>
     </main>

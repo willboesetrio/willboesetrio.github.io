@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     font-family: Alkalami, serif;
+    background-color: lightcoral
 }
 main {
     display: flex;
@@ -12,6 +13,8 @@ section {
     width: 400px;
     height: 200px;
     border: 2px solid black;
+    background: linear-gradient(to left top, lightgray, whitesmoke, lightgray);
+    color: rgb(0, 0, 60)
 }
 h3 {
     text-align: center;
@@ -21,7 +24,11 @@ p {
 }
 a {
     text-decoration: none;
+    color: maroon
 }
 a:hover {
     text-decoration: underline;
+}
+a:visited {
+    color: goldenrod
 }
