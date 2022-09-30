@@ -52,6 +52,9 @@ a:hover {
     max-width: 600px;
     margin: auto;
 }
+#contract-div p {
+    text-align:justify
+}
 li {
     text-align: left;
 }
