@@ -12,9 +12,15 @@ section {
     height: 200px;
     border: 2px solid black;
 }
-h5 {
+h3 {
     text-align: center;
 }
 p {
     text-align: center;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
 }
