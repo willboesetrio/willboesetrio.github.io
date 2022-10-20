@@ -15,3 +15,4 @@ document
         "href",
         "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
       );
+console.log(location.href)
