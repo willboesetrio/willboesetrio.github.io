@@ -7,4 +7,19 @@
     <a href="https://jigsaw.w3.org/css-validator/check/referer">
       <img src="images/button_validation_css.png" alt="validate css" id="css-btn">
     </a>
+    <script>
+    document
+      .getElementById("html-btn")
+      .setAttribute(
+        "href",
+        "https://validator.w3.org/check?uri=" + location.href
+      );
+    document
+      .getElementById("css-btn")
+      .setAttribute(
+        "href",
+        "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+      );
+console.log(location.href)
+    </script>
 </footer>
