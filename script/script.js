@@ -4,13 +4,13 @@
 // const cssBtn = document.getElementById("css-btn");
 // cssBtn.setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
 document
-      .getElementById("validation_link_html")
+      .getElementById("html-btn")
       .setAttribute(
         "href",
         "https://validator.w3.org/check?uri=" + location.href
       );
     document
-      .getElementById("validation_link_css")
+      .getElementById("css-btn")
       .setAttribute(
         "href",
         "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
