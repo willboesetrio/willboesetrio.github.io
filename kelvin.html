@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>William Boese's Wandering Bird | CP-CO-01 | Template</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="script/script.js" defer></script>
+</head>
+<body>
+  <div data-include="components/header.html"></div>
+  <main>
+    <h2>Will Boese's Wandering Bird | CP-CO-01</h2>
+    <p>Fahrenheit:</p><input type="text" id="fahrenheit">
+    <button id="">Convert To Kelvin</button>
+    <p>Kelvin:</p>
+    <p id="kelvin"></p>
+  </main>
+  <div data-include="components/footer.html"></div>
+  <script src="script/HTMLInclude.js"></script>
+  <script>
+    const fahrenheit = document.getElementById('fahrenheit');
+    const kelvin = document.getElementById('kelvin');
+    console.log(fahrenheit.value);
+    console.log(kelvin);
+  </script>
+</body>
+</html>
