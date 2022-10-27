@@ -1,46 +1,54 @@
 
 * {
-    text-align: center;
+    color: darkred;
     font-family: 'Dosis', sans-serif;
-    color: darkred
-    
 }
 html {
-    height: 100%;
     background-image: linear-gradient(to bottom right, lavender 25%, cyan);
+    height: 100%;
 }
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     background: burlywood;
+    bottom: 0;
     height: 90px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
  }
 footer nav {
-    padding: 4px 0 0 0;
     margin: 0;
+    padding: 4px 0 0 0;
 }
  main {
     height: 100%;
-    width: 100%;
     margin-top: 90px;
     padding-top: 10px;
+    width: 100%;
+}
+main p, h2, h3, h4 {
+    text-align: center;
 }
 header {
+    background: blanchedalmond;
+    text-align: center;
     position: fixed;
     top: 0;
     width: 100%;
-    background: blanchedalmond;
     height: 90px;
+}
+header p {
+    font-weight: 600;
+    font-size: 110%;
+    margin-top: 10px;
 }
 body {
     margin: 0;
 }
 h1 {
-    padding-top: 0;
-    padding-bottom: 0;
     margin-top: 10px;
     margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 a {
     text-decoration: none;
@@ -52,21 +60,16 @@ a:hover {
     max-width: 600px;
     margin: auto;
 }
-#contract-div p {
-    text-align:justify
-}
-li {
-    text-align: left;
-}
 figcaption {
     font-style: italic;
+    text-align: center;
 }
 figure img {
-    height: 200px;
     border-radius: 25px;
-}
-ul {
-    margin-left: 100px;
+    display: block;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 section {
     max-width: fit-content;
@@ -85,10 +88,27 @@ footer p {
     margin-bottom: 5px;
 }
 dd, dt {
-    text-align: left;
     margin-left: 20%;
     margin-right: 20%;
 }
+dd {
+    padding-left: 1em;
+}
 dt {
     font-weight: bold;
+}
+button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.assignments-container {
+    text-align: center;
+}
+.assignments-list {
+    display: inline-block;
+    text-align: left;
+}
+#contract-div p {
+    text-align:justify
 }
