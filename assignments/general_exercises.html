@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>William Boese's Wandering Bird | CP-CO-01 | General Exercises</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <script src="../script/script.js" defer></script>
+</head>
+<body>
+    <div data-include="../components/assignments_header.html"></div>
+    <main style="text-align: center;">
+        <h3>Temperature Converter</h3>
+        <p>Fahrenheit:</p>
+        <input type="text" id="fahrenheit">
+        <p><button id="convert-btn">Convert To Kelvin</button></p>
+        <p id="kelvin">Kelvin :</p>
+        <hr>
+        <h3>Divider :</h3>
+        <input type="number" id="divider-number-1">
+        <span>/</span>
+        <input type="number" id="divider-number-2">
+        <p><button id="divider-btn">Divide</button></p>
+        <p id="divider-result"> Result :</p>
+        <hr>
+    </main>
+    <div data-include="../components/footer.html"></div>
+    <script src="../script/HTMLInclude.js"></script>
+    <script>
+        //kelvin exercise:
+        const fahrenheit = document.getElementById('fahrenheit');
+        const kelvin = document.getElementById('kelvin');
+        const convertBtn = document.getElementById('convert-btn');
+        convertBtn.addEventListener('click', function() {
+            kelvin.textContent = 'Kelvin : ' + ((parseInt(fahrenheit.value) - 32) * 5/9 + 273.15).toFixed(2);
+        })
+        //divider exercise
+        const dividerNumber1 = document.getElementById('divider-number-1');
+        const dividerNumber2 = document.getElementById('divider-number-2');
+        const dividerBtn = document.getElementById('divider-btn');
+        const dividerResult = document.getElementById('divider-result');
+        dividerBtn.addEventListener('click', function() {
+            dividerNumber2.value != 0 ? dividerResult.textContent = 'Result : ' + (dividerNumber1.value / dividerNumber2.value) :
+            alert("You can't divide by zero!");
+        })
+    </script>
+</body>
+</html>
