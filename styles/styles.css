@@ -41,6 +41,10 @@ header p {
     font-size: 110%;
     margin-top: 10px;
 }
+footer nav {
+    font-weight: 600;
+    font-size: 110%;
+}
 body {
     margin: 0;
 }
