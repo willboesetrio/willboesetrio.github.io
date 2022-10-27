@@ -27,6 +27,12 @@
         <p><button id="divider-btn">Divide</button></p>
         <p id="divider-result"> Result :</p>
         <hr>
+        <h3>Clothing Helper</h3>
+        <label for="clothing-helper-input">What is the temperature outside? </label>
+        <input type="number" id="clothing-helper-input">
+        <p><button id="clothing-helper-button">Run Clothing Helper</button></p>
+        <p id="clothing-helper-output">You should wear:</p>
+        <hr>
     </main>
     <div data-include="../components/footer.html"></div>
     <script src="../script/HTMLInclude.js"></script>
@@ -47,6 +53,20 @@
             dividerNumber2.value != 0 ? dividerResult.textContent = 'Result : ' + (dividerNumber1.value / dividerNumber2.value) :
             alert("You can't divide by zero!");
         })
+        //clothing helper exercise
+        const clothingHelperInput = document.getElementById('clothing-helper-input');
+        const clothingHelperButton = document.getElementById('clothing-helper-button');
+        const clothingHelperOutput = document.getElementById('clothing-helper-output');
+        clothingHelperButton.addEventListener('click', function () {
+            if (clothingHelperInput.value > 80) {
+                clothingHelperOutput.textContent = 'You should wear : shorts';
+            } if (clothingHelperInput.value < 50) {
+                clothingHelperOutput.textContent = 'You should wear : a coat';
+            } else {
+                clothingHelperOutput.textContent = 'You should wear : whatever you want';
+            }
+        })
+
     </script>
 </body>
 </html>
