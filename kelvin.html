@@ -13,10 +13,11 @@
 </head>
 <body>
   <div data-include="components/header.html"></div>
-  <main>
+  <main style="text-align: center;">
     <h2>Will Boese's Wandering Bird | CP-CO-01</h2>
-    <p>Fahrenheit:</p><input type="text" id="fahrenheit">
-    <button id="">Convert To Kelvin</button>
+    <p>Fahrenheit:</p>
+    <input type="text" id="fahrenheit" style="margin: 0 auto 10px;">
+    <button id="convert-btn">Convert To Kelvin</button>
     <p>Kelvin:</p>
     <p id="kelvin"></p>
   </main>
@@ -25,8 +26,10 @@
   <script>
     const fahrenheit = document.getElementById('fahrenheit');
     const kelvin = document.getElementById('kelvin');
-    console.log(fahrenheit.value);
-    console.log(kelvin);
+    const convertBtn = document.getElementById('convert-btn');
+    convertBtn.addEventListener('click', function() {
+      kelvin.textContent = ((parseInt(fahrenheit.value) - 32) * 5/9 + 273.15).toFixed(2);
+    })
   </script>
 </body>
 </html>
