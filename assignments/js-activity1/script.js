@@ -38,7 +38,7 @@ const customer_database = [
   const customerButton = document.getElementById('customer-button');
   customerButton.addEventListener('click', function() {
     const userInput = document.getElementById('customer-input').value;
-    if (userInput <= 6  && userInput >= 1) {
+      let foundCustomer = false;
         for (const customer of customer_database) {
             if (customer.customer_id == userInput) {
                 document.getElementById('customer-output').innerHTML =
@@ -64,9 +64,9 @@ const customer_database = [
                             <td>${customer.last_purchase_quantity}</td>
                         </tr>
                     </table>`
+                    foundCustomer = true;
             }
-        } 
-    } else  {
-        document.getElementById('customer-output').innerHTML = '<strong>Please enter a valid customer ID!</strong>';
-    }
+        } if (!foundCustomer) {
+          document.getElementById('customer-output').innerHTML = 'ID not found'
+        }
   })

@@ -104,12 +104,11 @@ const testData = [
     for (const item of testData) {
         if (item.submissionDate === dateInput.value) {
             newArray.push(item);
-        }
-    }
-    if (newArray) {
-        for (const item of newArray) {
             output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
         }
+    }
+    if (newArray.length === 0) {
+      output.innerHTML = 'No Information for this date';
     }
   })
   idButton.addEventListener('click', function() {
@@ -118,12 +117,11 @@ const testData = [
     for (const item of testData) {
         if (item.studentId == idInput.value) {
             newArray.push(item);
-        }
-    }
-    if (newArray) {
-        for (const item of newArray) {
             output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
         }
+    }
+    if (newArray.length === 0) {
+      output.innerHTML = 'ID not found';
     }
   })
   unsubmitButton.addEventListener('click', function() {
