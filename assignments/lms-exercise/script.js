@@ -127,6 +127,7 @@ const testData = [
   unsubmitButton.addEventListener('click', function() {
     output.innerHTML = '';
     const allStudents = [];
+    const submittedStudents = []
     for (const item of testData) {
         if (!allStudents.includes(item.studentName)) {
             allStudents.push(item.studentName)
@@ -134,10 +135,14 @@ const testData = [
     }
     for (const item of testData) {
         if (item.submissionDate === unsubmitInput.value) {
-            const currentStudentIndex = allStudents.indexOf(item.studentName)
+            if(!submittedStudents.includes(item.studentName)){
+            const currentStudentIndex = allStudents.indexOf(item.studentName);
             allStudents.splice(currentStudentIndex, 1);
+            submittedStudents.push(item.studentName);
+            }
         }
     }
+    console.log(submittedStudents);
     output.textContent = `Students without submission on date ${unsubmitInput.value}: ${allStudents.join(' ')}`
   })
   averageButton.addEventListener('click', function() {
