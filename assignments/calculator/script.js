@@ -1,8 +1,8 @@
 const buttons = document.querySelectorAll('button');
 for (const button of buttons) {
     button.addEventListener('click', (event) => {
-        let operand1 = parseInt(document.getElementById('operand1').value);
-        let operand2 = parseInt(document.getElementById('operand2').value);
+        let operand1 = parseFloat(document.getElementById('operand1').value);
+        let operand2 = parseFloat(document.getElementById('operand2').value);
         let output = document.getElementById('output');
         let operandDisplay = document.getElementById('operand-display');
         let error = document.getElementById('error');
@@ -29,6 +29,16 @@ for (const button of buttons) {
                     error.textContent = "error: cannot divide by zero":
                     output.textContent = operand1 / operand2;
                     operandDisplay.textContent = '/';
+                    break;
+                case 'exponent':
+                    error.textContent = '';
+                    output.textContent = Math.pow(operand1, operand2)
+                    operandDisplay.textContent = '^';
+                    break;
+                case 'sqrt':
+                    error.textContent = '';
+                    output.textContent = Math.pow(operand2, (1 / operand1))
+                    operandDisplay.textContent = '√';
                     break;
             }
         } else {
