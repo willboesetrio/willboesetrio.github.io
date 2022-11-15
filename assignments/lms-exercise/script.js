@@ -90,6 +90,7 @@ const testData = [
       submissionDate: "2/20/2020"
     }
   ];
+
   const dateInput = document.getElementById('date-input');
   const dateButton = document.getElementById('date-button');
   const output = document.getElementById('output');
@@ -98,32 +99,102 @@ const testData = [
   const unsubmitInput = document.getElementById('unsubmit-input');
   const unsubmitButton = document.getElementById('unsubmit-button');
   const averageButton = document.getElementById('average-button');
+
   dateButton.addEventListener('click', function() {
     output.innerHTML = '';
     let newArray = [];
     for (const item of testData) {
         if (item.submissionDate === dateInput.value) {
             newArray.push(item);
-            output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
+
+            const quizName = document.createElement('div');
+            const quizNameText = document.createTextNode(`Quiz Name: ${item.quizName}`)
+            quizName.appendChild(quizNameText);
+            output.appendChild(quizName);
+
+            const quizModule = document.createElement('div');
+            const quizModuleText = document.createTextNode(`Quiz Module: ${item.quizModule}`);
+            quizModule.appendChild(quizModuleText);
+            output.appendChild(quizModule);
+
+            const quizScore = document.createElement('div');
+            const quizScoreText = document.createTextNode(`Quiz Score: ${item.quizScore}`);
+            quizScore.appendChild(quizScoreText);
+            output.appendChild(quizScore);
+
+            const studentId = document.createElement('div');
+            const studentIdText = document.createTextNode(`Student ID: ${item.studentId}`);
+            studentId.appendChild(studentIdText);
+            output.appendChild(studentId);
+
+            const studentName = document.createElement('div');
+            const studentNameText = document.createTextNode(`Student Name: ${item.studentName}`);
+            studentName.appendChild(studentNameText);
+            output.appendChild(studentName);
+
+            const submissionDate = document.createElement('div');
+            const submissionDateText = document.createTextNode(`Submission Date: ${item.submissionDate}`);
+            submissionDate.appendChild(submissionDateText);
+            output.appendChild(submissionDate);
+
+            const horizontalRule = document.createElement('hr')
+            output.appendChild(horizontalRule)
+            // output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
         }
     }
     if (newArray.length === 0) {
-      output.innerHTML = 'No Information for this date';
+
+      output.textContent = 'No Information for this date';
     }
   })
+
   idButton.addEventListener('click', function() {
     output.innerHTML = '';
     let newArray = [];
     for (const item of testData) {
         if (item.studentId == idInput.value) {
             newArray.push(item);
-            output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
+
+            const quizName = document.createElement('div');
+            const quizNameText = document.createTextNode(`Quiz Name: ${item.quizName}`)
+            quizName.appendChild(quizNameText);
+            output.appendChild(quizName);
+
+            const quizModule = document.createElement('div');
+            const quizModuleText = document.createTextNode(`Quiz Module: ${item.quizModule}`);
+            quizModule.appendChild(quizModuleText);
+            output.appendChild(quizModule);
+
+            const quizScore = document.createElement('div');
+            const quizScoreText = document.createTextNode(`Quiz Score: ${item.quizScore}`);
+            quizScore.appendChild(quizScoreText);
+            output.appendChild(quizScore);
+
+            const studentId = document.createElement('div');
+            const studentIdText = document.createTextNode(`Student ID: ${item.studentId}`);
+            studentId.appendChild(studentIdText);
+            output.appendChild(studentId);
+
+            const studentName = document.createElement('div');
+            const studentNameText = document.createTextNode(`Student Name: ${item.studentName}`);
+            studentName.appendChild(studentNameText);
+            output.appendChild(studentName);
+
+            const submissionDate = document.createElement('div');
+            const submissionDateText = document.createTextNode(`Submission Date: ${item.submissionDate}`);
+            submissionDate.appendChild(submissionDateText);
+            output.appendChild(submissionDate);
+
+            const horizontalRule = document.createElement('hr')
+            output.appendChild(horizontalRule)          
+            // output.innerHTML += `Quiz Name: ${item.quizName}<br>Quiz Module: ${item.quizModule}<br>QuizScore: ${item.quizScore}<br>Student ID: ${item.studentId}<br>Student Name: ${item.studentName}<br>Submission Date: ${item.submissionDate}<br><hr>`
         }
     }
     if (newArray.length === 0) {
-      output.innerHTML = 'ID not found';
+      output.textContent = 'ID not found';
     }
   })
+
   unsubmitButton.addEventListener('click', function() {
     output.innerHTML = '';
     const allStudents = [];
@@ -142,9 +213,9 @@ const testData = [
             }
         }
     }
-    console.log(submittedStudents);
     output.textContent = `Students without submission on date ${unsubmitInput.value}: ${allStudents.join(' ')}`
   })
+
   averageButton.addEventListener('click', function() {
     output.innerHTML= '';
     const scoresArray = [];
