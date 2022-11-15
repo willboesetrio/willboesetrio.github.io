@@ -59,9 +59,10 @@ Change Log:
 -changed 'writeWrodToList' to 'writeWordToList' at line 88
 -changed '.child' to '.children' at line 122
 -changed 'next-words' to 'next-words-list' at line 134
--changed 'class' to 'classList' at line
 -changed '.innerText' to '.value' on line 19
 -changed 'remove' to 'removeChild' at line 114
--changed '!isValidWord' to 'isValidWord' at line
+-changed '!isValidWord' to 'isValidWord' at line 21
 -changed '<' to '>=' at line 79
 - at 92 class.add to classList.add('icon')
+-line 128 changed 'return liElements' to 'return words'
+-line 44 switched height and width arguments
