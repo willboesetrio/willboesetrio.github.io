@@ -21,7 +21,7 @@ const checkRequired = (input, errorMessages) => {
  * @returns a string that indicates to no longer search for errors on this input
  */
 const checkRequiredSize = (input, errorMessages) => {
-    if (input.classList.contains('required_size') && input.value.trim().length < input.minLength) {
+    if (input.classList.contains('required_size') && input.value.trim().length == input.minLength) {
         errorMessages.push("Required_size field lengths must exactly match the minlength attribute of that field.");
         return 'end_loop';
     }
