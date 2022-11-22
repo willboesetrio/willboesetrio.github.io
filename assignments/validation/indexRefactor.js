@@ -81,7 +81,7 @@ const checkPassword = (input, errorMessages) => {
  * @param {string []} errorMessages 
  */
 const checkPhone = (input, errorMessages) => {
-    if (input.classList.contains('phone') && !/\d{3}-\d{3}-\d{4}/.test(input.value.trim())) {
+    if (input.classList.contains('phone') && !/^\d{3}-\d{3}-\d{4}$/.test(input.value.trim())) {
         errorMessages.push("Phone fields must match the format of XXX-XXX-XXXX.");
     }
 }
@@ -92,7 +92,7 @@ const checkPhone = (input, errorMessages) => {
  * @param {string []} errorMessages 
  */
 const checkDate = (input, errorMessages) => {
-    if (input.classList.contains('date') && !/\d{2}\/\d{2}\/\d{4}/.test(input.value.trim())) {
+    if (input.classList.contains('date') && !/^\d{2}\/\d{2}\/\d{4}$/.test(input.value.trim())) {
         errorMessages.push("Date fields must match the format of XX/XX/XXXX.");
     }
 }
